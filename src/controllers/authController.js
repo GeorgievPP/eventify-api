@@ -81,3 +81,25 @@ export const login = async (req, res, next) => {
         next(error);
     }
 };
+
+export const logout = async (req, res, next) => {
+  try {
+    const logMessage = [
+      '[Logout]',
+      `User: ${req.user.email}`,
+      `ID: ${req.user._id}`,
+      `Role: ${req.user.role}`,
+      `Time: ${new Date().toISOString()}`,
+      `IP: ${req.ip}`
+    ].join(' | ');
+    
+    console.log(logMessage);
+    
+    return sendSuccess(res, {
+      message: 'Logged out successfully'
+    });
+  } catch (error) {
+    console.error('[Logout Error]', error);
+    next(error);
+  }
+};
