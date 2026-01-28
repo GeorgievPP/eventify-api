@@ -46,7 +46,15 @@ const authLimiter = rateLimit({
 const app = express();
 
 // Global middlewares
-app.use(cors());
+app.use(
+    cors({
+        origin: [
+            'http://localhost:4200',           // Local Angular dev
+            'https://eventpass.vercel.app',    // Production frontend (ще update-неш URL-а след Vercel deploy)
+        ],
+        credentials: true,
+    })
+);
 app.use(express.json()); // за JSON body
 app.use(morgan('dev'));
 app.use(apiLimiter); // прилагаме на всички маршрути
