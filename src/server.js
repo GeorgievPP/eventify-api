@@ -12,7 +12,7 @@ import userRoutes from './routes/userRoutes.js';
 import eventRoutes from './routes/eventRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
 import commentRoutes from './routes/commentRoutes.js';
-import { notFound, errorHandler } from './middleware/errorHandler.js';
+import { notFound, errorHandler } from './middlewares/errorHandler.js';
 
 
 dotenv.config();

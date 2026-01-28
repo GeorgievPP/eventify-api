@@ -1,7 +1,7 @@
 import express from 'express';
 
-import { protect } from '../middleware/auth.js';
-import { requirePermission } from '../middleware/checkRole.js';
+import { protect } from '../middlewares/auth.js';
+import { requirePermission } from '../middlewares/checkRole.js';
 
 import {
   getEvents,
