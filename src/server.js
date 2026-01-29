@@ -50,7 +50,7 @@ app.use(
     cors({
         origin: [
             'http://localhost:4200',           // Local Angular dev
-            'https://eventpass.vercel.app',    // Production frontend (ще update-неш URL-а след Vercel deploy)
+            'https://eventify-one-eta.vercel.app',      // Production Vercel
         ],
         credentials: true,
     })
