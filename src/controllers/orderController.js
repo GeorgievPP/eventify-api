@@ -30,7 +30,7 @@ export const getOrderById = async (req, res, next) => {
     try {
         const order = await Order.findById(req.params.id)
             .populate('userId', 'email role')
-            .populate('items.eventId', 'title price');
+            // .populate('items.eventId', 'title price');
 
         if (!order) {
             res.status(404);
