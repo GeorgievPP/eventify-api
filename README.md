@@ -148,7 +148,6 @@ admin → poweruser → user
 |--------|----------|------|------|-------------|
 | POST | `/api/auth/register` | - | - | Register |
 | POST | `/api/auth/login` | - | - | Login |
-| GET | `/api/auth/me` | ✅ | - | Current user |
 | GET | `/api/events` | - | - | List events |
 | GET | `/api/events/:id` | - | - | Get event |
 | POST | `/api/events` | ✅ | Staff+ | Create event |
